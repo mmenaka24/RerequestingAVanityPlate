@@ -10,7 +10,7 @@ def is_valid(s):
     return (
         starts_with_two_letters(s)
         and max_six_min_two(s)
-        and numbers_at_end(s)
+        and numbers_only_at_end_and_no_leading_zero(s)
         and no_punct(s)
     )
 
@@ -23,7 +23,7 @@ def max_six_min_two(s):
     return 1 < len(s) < 7
 
 
-def numbers_at_end(s):
+def numbers_only_at_end_and_no_leading_zero(s):
 
     # find first number
 

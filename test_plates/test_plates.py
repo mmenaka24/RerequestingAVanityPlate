@@ -5,6 +5,8 @@ def test_is_valid_starts_with_two_letters():
     assert is_valid("MM") == True
     assert is_valid("MENAKA") == True
     assert is_valid("M24") == False
+    assert is_valid("1M") == False
+    assert is_valid("!M") == False
 
 
 def test_is_valid_max_six_min_two():
@@ -29,3 +31,7 @@ def test_is_valid_numbers_at_end():
 def test_is_valid_no_punct():
     assert is_valid("MENAKA") == True
     assert is_valid("MM!") == False
+    assert is_valid("MM MM") == False
+    assert is_valid("MM.MM") == False
+    assert is_valid("MM-MM") == False
+    assert is_valid("MM@12") == False
